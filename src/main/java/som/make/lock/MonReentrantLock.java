@@ -33,9 +33,22 @@ public class MonReentrantLock implements Runnable {
             System.out.println(Thread.currentThread().getName() +"获取到锁。");
             try {
                 i++;
+                // 得到锁后无限循环，看看一看，获取不到锁的线程是如何阻塞的
+                // for (;;) {
+                //     Thread.sleep(5000);
+                // }
+                // 得到锁挂起5s钟，等待另一个线程阻塞，然后看看lock.unlock是如何唤醒另一个阻塞的线程的
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             } finally {
                 System.out.println(Thread.currentThread().getName() +"释放锁。");
                 lock.unlock();
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
