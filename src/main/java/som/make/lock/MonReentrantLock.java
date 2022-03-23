@@ -26,6 +26,9 @@ public class MonReentrantLock implements Runnable {
         }
     }
 
+    /**
+     * 这个方法用来测试ReentrantLock获取锁和释放锁的过程。
+     */
     private void lockRun() {
         for (int j = 0; j < 1000; j++) {
             System.out.println(Thread.currentThread().getName() +"开始尝试获取锁。");
@@ -43,12 +46,21 @@ public class MonReentrantLock implements Runnable {
                 e.printStackTrace();
             } finally {
                 System.out.println(Thread.currentThread().getName() +"释放锁。");
+
                 lock.unlock();
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                // 释放锁后无线循环，看看如何唤醒已排队的线程
+                for (;;) {
+                    try {
+                        Thread.sleep(5000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+                // try {
+                //     Thread.sleep(5000);
+                // } catch (InterruptedException e) {
+                //     e.printStackTrace();
+                // }
             }
         }
     }

@@ -12,7 +12,14 @@ public class ConditionLockQueue<T> {
     private final Condition producer = lock.newCondition();
     private final Condition consumer = lock.newCondition();
 
-    public int max = 10;
+    private int max = 100;
+
+    public ConditionLockQueue() {
+    }
+
+    public ConditionLockQueue(int max) {
+        this.max = max;
+    }
 
     public void put(T resource) throws InterruptedException {
         lock.lock();
