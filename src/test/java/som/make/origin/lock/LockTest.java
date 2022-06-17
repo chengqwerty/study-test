@@ -1,7 +1,8 @@
-package som.make.lock;
+package som.make.origin.lock;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import som.make.origin.lock.*;
 
 import java.util.concurrent.locks.ReentrantLock;
 

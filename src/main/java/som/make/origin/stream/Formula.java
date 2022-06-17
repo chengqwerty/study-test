@@ -1,4 +1,4 @@
-package som.make.stream;
+package som.make.origin.stream;
 
 /**
  * jdk8 允许接口中定义默认方法

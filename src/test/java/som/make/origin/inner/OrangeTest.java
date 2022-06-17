@@ -1,4 +1,4 @@
-package som.make.inner;
+package som.make.origin.inner;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package som.make.tree;
+package som.make.structure.tree;
 
 /**
  * 平衡二叉搜索树

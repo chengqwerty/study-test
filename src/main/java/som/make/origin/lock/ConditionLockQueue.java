@@ -1,4 +1,4 @@
-package som.make.lock;
+package som.make.origin.lock;
 
 import java.util.LinkedList;
 import java.util.concurrent.locks.Condition;

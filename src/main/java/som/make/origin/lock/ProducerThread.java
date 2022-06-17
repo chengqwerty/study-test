@@ -1,10 +1,10 @@
-package som.make.lock;
+package som.make.origin.lock;
 
-public class ConsumerThread extends Thread {
+public class ProducerThread extends Thread {
 
     private final ConditionLockQueue<String> queue;
 
-    public ConsumerThread(ConditionLockQueue<String> queue) {
+    public ProducerThread(ConditionLockQueue<String> queue) {
         this.queue = queue;
     }
 
@@ -12,11 +12,12 @@ public class ConsumerThread extends Thread {
     public void run() {
         while (true) {
             try {
-                queue.take();
-                Thread.sleep(4000);
+                queue.put("chengcheng");
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
+
 }

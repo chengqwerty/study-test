@@ -1,6 +1,7 @@
-package som.make.tree;
+package som.make.structure.tree;
 
 import org.junit.jupiter.api.Test;
+import som.make.structure.tree.AvlTree;
 
 public class TreeTest {
 

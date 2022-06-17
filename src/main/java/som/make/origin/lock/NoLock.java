@@ -1,4 +1,4 @@
-package som.make.lock;
+package som.make.origin.lock;
 
 public class NoLock implements Runnable {
 
