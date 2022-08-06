@@ -1,10 +1,10 @@
-package som.make.origin.stream;
+package som.make.origin.jdk8;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-public class ListStreamTest {
+public class LambdaTest {
 
     /**
      * 原始的排序写法,需要手写一个匿名类

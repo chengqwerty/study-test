@@ -1,7 +1,6 @@
-package som.make.origin.stream;
+package som.make.origin.jdk8;
 
 import org.junit.jupiter.api.Test;
-import som.make.origin.stream.Formula;
 
 public class FormulaTest {
 
