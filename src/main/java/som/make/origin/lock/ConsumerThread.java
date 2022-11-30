@@ -13,7 +13,7 @@ public class ConsumerThread extends Thread {
         while (true) {
             try {
                 queue.take();
-                Thread.sleep(4000);
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

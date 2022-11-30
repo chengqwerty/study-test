@@ -47,28 +47,28 @@ public class LockTest {
         Thread p1 = new ProducerThread(queue);
         Thread p2 = new ProducerThread(queue);
         Thread p3 = new ProducerThread(queue);
+        Thread p4 = new ProducerThread(queue);
 
         Thread c1 = new ConsumerThread(queue);
         Thread c2 = new ConsumerThread(queue);
         Thread c3 = new ConsumerThread(queue);
-        Thread c4 = new ConsumerThread(queue);
 
         p1.start();
         p2.start();
         p3.start();
+        p4.start();
 
         c1.start();
         c2.start();
         c3.start();
-        c4.start();
 
         p1.join();
         p2.join();
         p3.join();
+        p4.join();
         c1.join();
         c2.join();
         c3.join();
-        c4.join();
 
         System.out.println("执行完成！");
     }
